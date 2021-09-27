@@ -20,30 +20,13 @@ clean.module("VeigarDrawings", package.seeall, log.setup)
 local CoreEx = _G.CoreEx
 local Libs = _G.Libs
 local os_clock = _G.os.clock
-local Prediction = Libs.Prediction
-local HealthPred = _G.Libs.HealthPred
-local DetectedSpell
-local DashLib = _G.Libs.DashLib
-local Orbwalker = Libs.Orbwalker
-local CollisionLib = Libs.CollisionLib
-local DamageLib = Libs.DamageLib
-local ImmobileLib = Libs.ImmobileLib
-local SpellLib = Libs.Spell
-local TS = Libs.TargetSelector()
-local HealthPrediction = Libs.HealthPred
 local ObjectManager = CoreEx.ObjectManager
 local EventManager = CoreEx.EventManager
-local Input = CoreEx.Input
 local Enums = CoreEx.Enums
 local Game = CoreEx.Game
 local Geometry = CoreEx.Geometry
 local Renderer = CoreEx.Renderer
-local Evade = _G.CoreEx.EvadeAPI
-local SpellSlots = Enums.SpellSlots
-local SpellStates = Enums.SpellStates
-local BuffTypes = Enums.BuffTypes
 local Events = Enums.Events
-local HitChance = Enums.HitChance
 local HitChanceStrings = { "Collision", "OutOfRange", "VeryLow", "Low", "Medium", "High", "VeryHigh", "Dashing", "Immobile" };
 
 local LocalPlayer = ObjectManager.Player.AsHero
