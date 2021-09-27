@@ -28,7 +28,7 @@ local Events = Enums.Events
 
 local LocalPlayer = ObjectManager.Player.AsHero
 
-local ScriptVersion = "0.0.1"
+local ScriptVersion = "0.0.2"
 local ScriptLastUpdate = "9/26/21"
 
 -- Globals
@@ -46,6 +46,7 @@ function Veigar.LoadMenu()
         Menu.NewTree("VeigarDrawings", "Drawings", function()
             Menu.Checkbox("Drawings.W", "Q + W Range", true)
             Menu.Checkbox("Drawings.E", "E", true)
+            Menu.Checkbox("Drawings.R", "R", true)
 
 
         end)
@@ -67,6 +68,10 @@ function Veigar.OnDraw()
     
     if Menu.Get("Drawings.E") then
         Renderer.DrawCircle3D(LocalPlayer.Position, 725, 30, 1, 0x0000FFFF)
+    end
+
+    if Menu.Get("Drawings.R") then
+        Renderer.DrawCircle3D(LocalPlayer.Position, 650, 30, 1, 0xFF0000FF)
     end
 
     return true
