@@ -23,11 +23,8 @@ local os_clock = _G.os.clock
 local ObjectManager = CoreEx.ObjectManager
 local EventManager = CoreEx.EventManager
 local Enums = CoreEx.Enums
-local Game = CoreEx.Game
-local Geometry = CoreEx.Geometry
 local Renderer = CoreEx.Renderer
 local Events = Enums.Events
-local HitChanceStrings = { "Collision", "OutOfRange", "VeryLow", "Low", "Medium", "High", "VeryHigh", "Dashing", "Immobile" };
 
 local LocalPlayer = ObjectManager.Player.AsHero
 
